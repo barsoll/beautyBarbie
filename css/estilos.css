@@ -1,0 +1,489 @@
+*{
+    margin: 0px;
+    padding: 0px; 
+}
+/*---Redes Sociales---*/
+
+.contenedorRedes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+    padding-left: 10px;
+    border-bottom: 1px solid #cacaca;
+    background-color: #eeeeee;
+}    
+.contenedorRedes ul li a{
+    display: block;
+    padding: 0 10px;
+    background-color: #eeeeee;
+    color: rgb(255, 164, 228);
+    line-height: 50px;
+    font-size: 18px;
+}
+.contenedorRedes ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;   
+}
+.contenedorRedes ul li a:hover{
+    transform: translate(-3px) scale(1.05);
+    background-color: pink;
+    color: white
+}
+
+/*---Logo---*/
+
+.contenedorLogoInicio img {
+    width: 135px;
+}
+.contenedorLogoInicio {
+    display: flex;
+    justify-content: center;
+}
+
+/*---Menú---*/
+
+.menu {
+    background-color: #eeeeee;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.menu ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.botonMenu {
+    display: block;
+    margin-left: 20px;
+    float: left;
+    z-index: 1;
+}
+.botonMenu a{
+    font-family: 'Heebo', sans-serif;
+    color: rgba(247, 89, 163, 0.877);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+}
+.botonMenu a:hover{
+    font-family: 'Heebo', sans-serif;
+    background-color: pink;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px white;
+}
+.menu li ul{  
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    justify-content: center;
+    list-style: none;
+}
+.menu li:hover > ul {
+    display: block;
+}
+li.botonMenu ul {
+    margin-top: 0px;
+    background-color: white;
+    box-shadow: 1px 1px 5px #ccc9c9;
+}
+li.botonMenu ul li {
+    width: 100%;
+    position: relative;
+    box-sizing:  border-box;
+    padding: 10px;
+}
+
+li.botonMenu ul li:hover {
+    background: pink;
+    color: white;
+}
+
+li.botonMenu ul li a:hover {
+    box-shadow: none;
+    background-color: pink;
+    color: white;
+}
+nav.menu {
+    background: white;
+    position: relative;
+    border-bottom: 1px solid #dedddd;
+    box-shadow: 1px 1px 7px rgb(0 0 0 / 10%);
+    margin-bottom: 0px;
+
+}
+
+/*---Wathsapp---*/
+
+.contenedorWhatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+.wathsapp:hover {
+    transform: scale(1.2);
+}
+.wathsapp {
+    background-color: #128C7E;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 35%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.wathsapp i {
+    font-size: 25px;
+    color: white;
+}
+
+.contenedorWhatsapp p {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: white;
+    padding: 5px;
+    color: #4D4D4D;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 35%);
+    left: -190px;
+    top: -65px;
+    z-index: 1;
+}
+
+.contenedorWhatsapp p:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 14px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 11px solid #ffffff;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+}
+/*---Banners---*/
+
+.banners img{
+    width: 100%;
+    margin-top: 5px;
+   /* height: 500px;*/
+} 
+.banners{
+    display: grid;
+    grid-template-areas: 
+    "principal principal"
+    "skincare nails"
+    "maquillaje maquillaje "
+    ;
+    grid-template-columns: 1fr 1fr;
+}
+.bannerPrincipal{
+    grid-area: principal;
+}
+.bSkincare{
+    grid-area: skincare;
+}
+.bNails{
+    grid-area: nails;
+}
+.bMaquillaje{
+    grid-area: maquillaje;
+}
+.bMaquillaje img{
+    width: 70%;
+    height: 300px;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+/*---Productos Destacados---*/
+
+.productosDestacados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.productos h2{
+    font-family: 'Ubuntu', sans-serif;
+    color: rgba(247, 89, 163, 0.877);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    animation-duration: 10s;
+    animation-name: aparecer;
+}
+.productosDestacados .badge-secondary {
+    color: #fff;
+    background-color: rgb(255, 176, 229);
+    display: flex;
+    justify-content: center;
+}
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.productosDestacados article{
+    padding: 50px;
+    margin-left: 5px;
+    width: 100%;
+    justify-content:flex-start;
+    transition: 3s;
+}
+.productosDestacados img {
+    width: 100%;
+    height: 190px;
+    border: solid 5px rgb(255, 176, 229);
+}
+.productosDestacados article:hover{
+transform: scale(1.2);
+}
+.productosDestacados p{
+    font-family: 'Heebo', sans-serif;
+    color: rgb(172, 113, 145);
+    margin-left: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+/*---Nosotros---*/
+
+.nosotros{
+    background-image: url(../imagenes/bannerNosotros.jpg);
+    background-size:cover;
+    width: 100%;
+    height: 500px;
+    padding-top: 50px;
+}
+.nosotros h2{
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align:start;
+    margin-top: 35px;
+    margin-left: 100px;
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+.nosotros p{
+    font-family: 'Heebo', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 500px;
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+/*---Productos---*/
+
+section.listaProductos {
+    width: 1080px;
+    display: block;
+    margin: 0 auto;
+}
+.listaProductos {
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgba(247, 89, 163, 0.877);
+}
+.listaProductos h1 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.listaProductos .contenedorProductos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-left: 5px;
+    width: 100%;
+}
+.producto {
+    background-color: white;
+    width: calc(25% - 20px);
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #dadada;
+}
+.producto img{
+    width: 100%;
+    height: 200px;
+}
+.producto p{
+margin-top: 8px;
+color: #868484;
+}
+.producto:hover {
+    box-shadow: 1px 5px 7px #cacaca;
+}
+
+/*---Contacto---*/
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    background-image: url(../imagenes/bannerFondo.jpg);
+    background-size:cover;
+    width: 100%;
+    padding-top: 50px;
+    margin-right: 500px;
+    align-items: stretch;
+}
+.formulario h2{
+    font-family: 'Ubuntu', sans-serif;
+    color: rgba(247, 89, 163, 0.877);
+    text-align: center;
+    margin-bottom: 50px;
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+.formulario form{
+    font-family: 'Heebo', sans-serif;
+    color: rgb(226, 43, 144); 
+    text-align: center;
+    margin-bottom: 50px;
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+.formulario .btn.btn-primary {
+    background: #ef8bc4;
+    border-color: #e8a7dd;
+}
+
+/*---Preguntas Frecuentes---*/
+
+.preguntasFrecuentes{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-image: url(../imagenes/bannerFondo.jpg);
+    background-size:cover;
+    width: 100%;
+    padding-top: 50px;
+    margin-right: 500px;
+}
+.preguntasFrecuentes h2{
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(172, 113, 145);
+    font-style: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+.preguntasFrecuentes h3{
+    font-family: 'Ubuntu', sans-serif;
+    color: rgba(194, 38, 124, 0.815);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+.preguntasFrecuentes p {
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(172, 113, 145);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+    /*---Copyright---*/
+
+.copy p{
+    font-family: 'Heebo', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: rgb(204, 30, 102);
+    margin-right: 15px;
+}
+
+
+body {
+    background-color: #eeeeee;
+}
