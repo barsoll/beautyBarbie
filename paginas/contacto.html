@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <title>Beauty Barbie</title>
+    <link rel="icon" type="image/x-icon" href="../imagenes/logo.png"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/demo.css">
+    <link rel="stylesheet" href="../css/estilosMobile.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="http://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <div class="contenedorRedes">
+    <form>
+       <input type="text" placeholder="Buscar">
+       <button class="buscar">
+           <img src="../imagenes/iconoBuscar.png" style="width:20px; height: 15px;"/>
+       </button>
+    </form>
+    <div>
+        <ul>
+            <li><a class="whatsapp" href="https://wa.me/+541125583632"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </div>
+    </div>
+    <nav class="menu">
+        <div class="contenedorLogoInicio">
+            <a href="../index.html">
+            <img src="../imagenes/logoBeauty.jpg">
+            </a>
+        </div>
+        <ul>
+            <li class="botonMenu">
+                <a href="../index.html">Inicio</a>
+            </li>
+            <li class="botonMenu">
+                <a href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="botonMenu">
+                <a href="productos.html">Productos</a>
+                    <ul>
+                        <li><a href="#maquillaje">Maquillaje</a></li>
+                        <li><a href="#skincare">SkinCare</a></li>
+                        <li><a href="#nails">Nails</a></li>
+                        <li><a href="#accesorios">Accesorios</a></li>
+                    </ul>
+            </li>
+            <li class="botonMenu">
+                <a href="contacto.html">Contacto</a>
+            </li>
+            <li class="botonMenu">
+                <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="contenedorWhatsapp">
+        <p>Hola! Dejanos tu consulta ..</p>   
+        <a href="https://wa.me/+541125583632" class="wathsapp">
+            <i class="fab fa-whatsapp"></i> 
+        </a>
+    </div>
+    <section class="formulario">
+        <h2>Contacto</h2>
+        <form>
+            <article>
+                <label for="nombre">Nombre</label>
+                <input type="text"name="nombre"/>
+            </article>
+            <br>
+            <article>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido"/>
+            </article>
+            <br>
+            <article>
+                <label for="email">Email</label>
+                <input type="email"name="email"/>
+            </article>
+            <br>
+            <article>
+                <label for="sexo">Seleccione género</label>
+                <select name="sexo">
+                <option value="masculino">Masculino</option> 
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+                </select>
+        </article>
+        <br>
+        <article>
+        <label for="comentario">Dejanos tu duda o comentario</label>
+        <br>
+        <textarea name="comentario"></textarea>
+        </article>
+        <br>
+        <article>
+        <input type="checkbox" name="promos" value="1"/>
+        <label>Deseo recebir promos/ofertas vía email</label>
+        </article>
+        <article>
+        <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+        <button type="reset" class="btn btn-primary btn-sm">Borrar</button>
+        </article>
+    </form>
+</section>
+<hr>
+<div class="copy">
+<p> Copyright &copy; Beauty Barbie - 2021. Todos los derechos reservados.</p>   
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="./js/bootstrap.bundle.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>  
+<script src="./js/bootstrap.js"></script>
+</body>
+</html>
