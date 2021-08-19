@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/demo.css">
     <link rel="stylesheet" href="../css/estilosMobile.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Space+Grotesk:wght@300;400&family=Style+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="http://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
@@ -66,8 +67,51 @@
             <i class="fab fa-whatsapp"></i> 
         </a>
     </div>
-    <section class="formulario">
+    <div class="contenedorContacto">
         <h2>Contacto</h2>
+        <p>Tenés alguna duda? Podés encontrarnos en nuestras redes.</p>
+        <section class="contactoRedes">
+            <ul>
+                <li><a class="whatsapp" href="https://wa.me/+541125583632"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a class="facebook" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a class="instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </section>
+        <div class="registro">
+            <div class="col-sm-3">
+              <label class="visually-hidden" for="specificSizeInputName">Nombre</label>
+              <input type="text" class="form-control" id="specificSizeInputName" placeholder="Usuario">
+            </div>
+            <div class="col-sm-3">
+              <label class="visually-hidden" for="specificSizeInputGroupUsername">Email</label>
+              <div class="input-group">
+                <div class="input-group-text">@</div>
+                <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username">
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+              <select class="form-select" id="specificSizeSelect">
+                <option selected>Genero</option>
+                <option value="1">Femenino</option>
+                <option value="2">Masculino</option>
+                <option value="3">Otro</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                <label class="form-check-label" for="autoSizingCheck2">
+                  Recordarme
+                </label>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary">Registrarme</button>
+            </div>
+        </div>
+        <section class="formulario">
         <form>
             <article>
                 <label for="nombre">Nombre</label>
@@ -75,40 +119,32 @@
             </article>
             <br>
             <article>
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido"/>
-            </article>
-            <br>
-            <article>
                 <label for="email">Email</label>
-                <input type="email"name="email"/>
+                <input type="email" name="email"/>
             </article>
             <br>
             <article>
-                <label for="sexo">Seleccione género</label>
-                <select name="sexo">
-                <option value="masculino">Masculino</option> 
-                <option value="femenino">Femenino</option>
-                <option value="otro">Otro</option>
-                </select>
-        </article>
-        <br>
-        <article>
-        <label for="comentario">Dejanos tu duda o comentario</label>
-        <br>
-        <textarea name="comentario"></textarea>
-        </article>
-        <br>
-        <article>
-        <input type="checkbox" name="promos" value="1"/>
-        <label>Deseo recebir promos/ofertas vía email</label>
-        </article>
-        <article>
-        <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
-        <button type="reset" class="btn btn-primary btn-sm">Borrar</button>
-        </article>
-    </form>
-</section>
+                <label for="telefono">Teléfono</label>
+                <input type="telefono"name="telefono"/>
+            </article>
+            <br>
+            <article>
+                <label for="comentario">Dejanos tu mensaje (opcional)</label>
+            <br>
+                <textarea name="comentario"></textarea>
+            </article>
+            <br>
+            <article>
+                <input type="checkbox" name="promos" value="1"/>
+                <label>Deseo recebir promos/ofertas vía email</label>
+            </article>
+            <article>
+                <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+                <button type="reset" class="btn btn-primary btn-sm">Borrar</button>
+            </article>
+        </form>
+        </section>
+    </div>
 <hr>
 <div class="copy">
 <p> Copyright &copy; Beauty Barbie - 2021. Todos los derechos reservados.</p>   
