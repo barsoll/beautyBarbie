@@ -3,7 +3,7 @@
     padding: 0px; 
 }
 /*---Variables---*/
-$fondoMenu:#eeeeee;
+$fondoMenu:  #ffffff;
 $fuentePrincipal:'Roboto Condensed', sans-serif;
 $fuenteSecundaria:'Ubuntu', sans-serif;
 $sobraCaja: 1px 1px 7px #4c4c4c8a;
@@ -21,26 +21,50 @@ $colorTexto:rgb(255, 255, 255);
     padding-left: 10px;
     border-bottom: 1px solid #cacaca;
     background-color: $fondoMenu;
-
-    ul li{
-        display: inline-block;
-        margin: 0 5px;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-
-        a{
-            padding: 0 10px;
-            background-color: $fondoMenu;
-            color: rgb(255, 164, 228);
-            line-height: 50px;
-            font-size: 18px;
+    
+    ul {
+        li:hover{
+            transform: translate(-3px) scale(1.5);
+            background-color: pink;
+            color: white;
+            cursor: pointer;
+            a {
+                background: none;
+                    i {
+                        color: white;
+                    }
+            }
+        } 
+        li{
+            display: inline-block;
+            margin: 0 5px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+    
+            a{
+                padding: 0 10px;
+                background-color: $fondoMenu;
+                color: rgb(255, 164, 228);
+                line-height: 50px;
+                font-size: 18px;
+            }
         }
-            a:hover{
-                transform: translate(-3px) scale(1.5);
-                background-color: pink;
-                color: white;
-            }    
+    }
+    .bg-light {
+        background-color: $fondoMenu !important;
+    }
+    .menuBurguer {
+        width: 17px;
+        display: none;
+    }
+    
+    .menuBurguer img {
+        width: auto;
+    }
+    .bordeBoton{
+        padding-left: 5px;
+
     }
 }    
 
@@ -209,6 +233,14 @@ li.botonMenu ul {
     }
 }
 
+/*---Contenedor---*/
+
+.contenedorGeneral{
+    width: 1080px;
+    display: block;
+    margin: 0 auto;
+}
+
 /*---Banners---*/
 
 .banners img{
@@ -239,7 +271,7 @@ li.botonMenu ul {
 }
 .bMaquillaje img{
     /*width: 100%;*/
-    height: 300px;
+    height: auto;
     margin-top: 10px;
 }
 .w-100 {
@@ -380,6 +412,8 @@ section.listaProductos {
     justify-content: center;
     text-align: center;
     border: 1px solid #dadada;
+    transition: all 0.3s ease;
+    cursor: pointer;
 
     img{
         width: 100%;
@@ -394,50 +428,64 @@ section.listaProductos {
         border: 1px solid #dadada;
         font-weight: bold;
     }
+    .badge-secondary {
+        color: #fff;
+        background-color: rgba(255, 192, 203, 0.87) !important; 
+    }
 }
 .producto:hover {
-    transform: translate(-3px) scale(1);
+    transform: scale(1.05);
     background-color: pink;
     color: white;
     box-shadow: 1px 5px 7px #cacaca;
 }
 
+
 /*---Contacto---*/
+
 .contenedorContacto{
     background-image: url(../imagenes/bannerFondo.jpg);
     background-size:cover;
     width: 100%;
-    display: grid;
-    grid-template-areas: 
-    "contacto contacto"
-    "info info"
-    "redes formulario"
-    "registro formulario"
-    ;
-    grid-template-columns: 1fr 1fr;
-}
-.contenedorContacto h2{
-    grid-area: contacto;
-}
-.contenedorContacto p{
-    grid-area: info;
-}
-.contactoRedes{
-    grid-area: redes;
-}
-.formulario{
-    grid-area: formulario;
-}
-.registro{
-    grid-area: registro;
+    display: block;
+    float: left;
+    padding: 40px;
+
+    .contedorContactoInner {
+        background: white;
+        box-shadow: 1px 1px 5px #00000057;
+        border-radius: 3px;
+        float: left;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contactoSectionLeft {
+        float: left;
+        width: 50%;
+    }
+
+    .contactoSectionRight {
+        float: left;
+        width: 50%;
+    }
+    .contactoSectionRight article, .contactoSectionRight article label, .contactoSectionRight article input {
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .contactoSectionRight form {
+        width: 100%;
+    }
 }
 
 .contenedorContacto h2 {
     font-family: $fuentePrincipal;
     font-weight: bold;
     color: rgba(247, 89, 163, 0.877);
-    margin-left:300px;
     margin-top: 50px;
+    text-align: center;
     animation-duration: 5s;
     animation-name: aparecer;
 }
@@ -466,12 +514,36 @@ section.listaProductos {
                 line-height: 30px;
                 font-size: 18px;
             }
-                a:hover{
-                    transform: translate(-3px) scale(1.5);
-                    background-color: pink;
-                    color: white;
-                }    
         }  
+}
+
+.contactoSectionLeft section.contactoRedes ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactoSectionLeft section.contactoRedes ul li {
+    margin-left: 0px;
+    display: flex;
+    margin-top: 0px;
+    width: 100%;
+    align-items: center;
+    }
+    
+.contactoSectionLeft section.contactoRedes ul li p {
+    margin-top: 0;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.registro{
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $fuentePrincipal;
+    color: rgba(247, 89, 163, 0.877);
+    animation-duration: 5s;
+    animation-name: aparecer;
 }
 
 .formulario{
@@ -501,21 +573,18 @@ section.listaProductos {
     }
 }    
 
-.registro{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: $fuentePrincipal;
-    color: rgba(247, 89, 163, 0.877);
-    animation-duration: 5s;
-    animation-name: aparecer;
-}
-.registro .col-auto btn btn-primary {
-    color: palevioletred;
-}
+
 
 /*---Preguntas Frecuentes---*/
 
+.contenedorPreguntas{
+    background: white;
+    box-shadow: 1px 1px 5px #00000057;
+    border-radius: 3px;
+    float: left;
+    width: 100%;
+    padding: 20px;
+}
 .preguntasFrecuentes{
     display: flex;
     flex-flow: column nowrap;
@@ -525,12 +594,14 @@ section.listaProductos {
     width: 100%;
     padding-top: 50px;
     margin-right: 500px;
+    min-height: calc(100vh - 241px);
 
         h2{
             font-family: $fuentePrincipal;
             color: rgb(172, 113, 145);
             font-style: bold;
             margin-bottom: 10px;
+            font-size: 25px;
             text-align: center;
             animation-duration: 5s;
             animation-name: aparecer;
@@ -540,7 +611,8 @@ section.listaProductos {
                 font-style: bold;
                 color: rgba(194, 38, 124, 0.815);
                 display: flex;
-                justify-content: space-around;
+                font-size: 15px;
+                font-weight: bold;
                 margin-top: 10px;
                 animation-duration: 5s;
                 animation-name: aparecer;
@@ -549,7 +621,8 @@ section.listaProductos {
                     font-family: $fuentePrincipal;
                     color: rgb(172, 113, 145);
                     display: flex;
-                    justify-content: space-around;
+                    font-size: 15px;
+                    font-weight: bold;
                     margin-top: 10px;
                     animation-duration: 5s;
                     animation-name: aparecer;
@@ -565,10 +638,187 @@ section.listaProductos {
     justify-content: center;
     color: white;
     padding: 5px;
+    margin-bottom: 0px;
 }
 
 /*---Body---*/
 
 .body {
     background-color: #eeeeee;
+}
+
+/*---Tablet---*/
+
+@media(max-width: 768){
+    
+}
+
+/*---Smartphone---*/
+
+@media(max-width: 480px) {
+
+    ul#hiddenMenu.open {
+        left: 0;
+    }
+    
+    ul#hiddenMenu {
+        z-index: 1;
+        display: block;
+        position: absolute;
+        background: white;
+        left: -100%;
+        transition: all 0.3s ease;
+        width: 50%;
+        height: 100vh;
+        box-shadow: 9px 23px 9px #0000000f;
+    }
+
+    ul#hiddenMenu li {
+        width: 100%;
+        margin-left: 0px;
+        /* height: 25%; */
+    }
+    
+    ul#hiddenMenu li a {
+        font-size: 16px;
+        padding: 12px;
+        float: left;
+        border-bottom: 1px solid #ffa6e5;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .menuBurguer {
+        display: block !important;
+        float: left;
+        
+    }
+    .contenedorRedes .menuBurguer {
+        width: 17px;
+        display: none;
+        margin-top: 22px;
+        margin-left: 10px;
+        margin-right: 18px;
+    }
+
+    /*---banner---*/
+
+    .carousel-inner img {
+        height: auto;
+    }
+
+    /*--- Redes ---*/
+
+    .contenedorRedes nav {
+        display: flex;
+        justify-content: center;
+        width: calc(100% - 45px);
+        margin-right: 0px;
+        padding-left: 0px;
+    }
+    .contenedorRedes {
+        display: block;
+    }
+    .contenedorRedes form input {
+        width: 80%;
+    }
+    .contenedorRedes div {
+        display: flex;
+        justify-content: center;
+    }
+    .contenedorRedes div ul {
+        margin-bottom: 0px;
+    }
+
+        /*--- Menú---*/
+    .botonMenu a {
+        font-size: 10px;
+    }
+    .menu ul {
+        width: 100%;
+        box-sizing: border-box;
+    }    
+
+    /*---ContenedorGeneral---*/
+
+    .contenedorGeneral {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /*---Nosotros---*/
+        .nosotros p{
+            font-family: "Roboto Condensed", sans-serif;
+            color: white;
+            font-weight: bold;
+            margin-top: 0px; 
+            margin-left: 0px; 
+            margin-right: 0px; 
+            animation-duration: 5s;
+            animation-name: aparecer;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 29px;
+        }
+    
+    /*--- Productos ---*/
+    section.listaProductos {
+        width: 100%;
+    }
+    section.listaProductos .producto {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .listaProductos .contenedorProductos {
+        display: block;
+        padding: 5px 25px;
+        margin-left: 0px; 
+        width: 100%;
+    }
+
+    /*---Contacto---*/
+
+    .contenedorContacto .contactoSectionLeft {
+        float: left;
+        width: 100%;
+    }
+    .contenedorContacto .contactoSectionRight {
+    float: left;
+    width: 100%;
+    }
+
+    /*--- CopyRight---*/
+    .copy {
+        text-align: center;
+        width: 100%;
+    }
+
+    .contenedorRedes > nav form {
+        display: flex;
+        width: 100%;
+    }
+    
+    .contenedorRedes > nav form input {
+        float: left;
+        width: calc(80% - 10px);
+    }
+    
+    .contenedorRedes > nav button {
+        float: left;
+        width: 20%;
+    }
+    
+    .contenedorRedes > nav a {
+        display: none;
+    }
+    
+    .contenedorRedes {
+        padding-left: 0px;
+        /* margin-top: 0px; */
+    }
+    
+    .contenedorRedes > nav form button {
+        margin-left: 5px;
+    }
 }

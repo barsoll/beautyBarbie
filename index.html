@@ -14,19 +14,20 @@
 </head>
 <body>
     <div class="contenedorRedes">
+        <div class="menuBurguer" id="buttonBurger"> <img src="./imagenes/menu.png"></div>
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand"></a>
             <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0 bordeBoton" type="submit">Search</button>
             </form>
         </nav>
     <div>
         <ul>
-            <li><a class="whatsapp" href="https://wa.me/+541125583632"><i class="fab fa-whatsapp"></i></a></li>
-            <li><a class="facebook" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a class="instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-            <li><a class="twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="whatsapp" href="https://wa.me/+541125583632"><img src="./imagenes/logoWp.png" width="20px" height="20px"></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/"><img src="./imagenes/logoFb.png" width="20px" height="20px"></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/"><img src="./imagenes/logoIg.png" width="20px" height="20px"></a></li>
+            <li><a class="twitter" href="https://www.twitter.com"><img src="./imagenes/logoTw.png" width="20px" height="20px"></a></li>
         </ul>
     </div>
     </div>
@@ -36,7 +37,7 @@
             <img src="imagenes/logoBeauty.png">
             </a>
         </div>
-        <ul>
+        <ul id="hiddenMenu">
             <li class="botonMenu">
                 <a href="index.html">Inicio</a>
             </li>
@@ -63,7 +64,7 @@
     <div class="contenedorWhatsapp">
         <p>Hola! Dejanos tu consulta ..</p>   
         <a href="https://wa.me/+541125583632" class="wathsapp">
-            <i class="fab fa-whatsapp"></i> 
+            <img src="./imagenes/whatsapp.png" width="20px" height="20px"> 
         </a>
     </div>
     <section class="contenedor">
@@ -111,30 +112,37 @@
             </div>
             <div class="bMaquillaje">
                 <a href="./paginas/productos.html#maquillaje">
-                    <img src="imagenes/bannerMaquillaje.png"/>
+                    <img src="imagenes/bannerMaquillaje.jpg"/>
                 </a>    
             </div>
         </div>    
-        <div class="productos">
-            <h2>Productos destacados</h2>
-        </div>
-        <div class="productosDestacados">  
+        <section class="listaProductos">
             <article>
-                <img src="imagenes/kitBrochas.jpg"/>
-                <p>Set bronchas x8 $1500</p>
-                <span class="badge badge-secondary">New</span>
+                <h1>Productos destacados</h1>
+                <div class="contenedorProductos">
+                    <div class="producto">
+                        <img src="imagenes/kitBrochas.jpg"/>
+                            <h2>Set bronchas x8 $1500</h2>
+                                <span class="badge badge-secondary">Nuevo producto</span>
+                    </div>
+                    <div class="producto">
+                        <img src="imagenes/kitRutina.jpg"/>
+                            <h2>Set de Limpieza by.Dadatina $2200</h2>
+                            <span class="badge badge-secondary">Nuevo producto</span>
+                    </div>
+                    <div class="producto">
+                        <img src="imagenes/kitSkincare.jpg"/>
+                            <h2>Set Accesorios para Rutina Facial $700</h2>
+                                <span class="badge badge-secondary">Nuevo producto</span>
+                    </div>
+                    <div class="producto">
+                        <img src="imagenes/esmalteVanta.jpg"/>
+                            <h2>Esmalte Semipermanente en Gel Vanta $550</h2>
+                                <span class="badge badge-secondary">Nuevo producto</span>
+                    </div>
+                </div>
             </article>
-            <article>
-                <img src="imagenes/kitRutina.jpg"/>
-                <p>Set de Limpieza by.Dadatina $2200</p>
-                <span class="badge badge-secondary">New</span>
-            </article>
-            <article>
-                <img src="imagenes/kitSkincare.jpg"/>
-                <p>Set Accesorios para Rutina Facial $700</p>
-                <span class="badge badge-secondary">New</span>
-            </article>    
-        </div>  
+        </section>
     </section>    
 <div class="copy">
     <p> Copyright &copy; Beauty Barbie - 2021. Todos los derechos reservados.</p>   
@@ -143,5 +151,17 @@
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>  
     <script src="./js/bootstrap.js"></script>    
+    <script>
+        let button = document.getElementById('buttonBurger');
+        let menu = document.getElementById('hiddenMenu');
+        button.addEventListener('click', function(){
+            console.log("hice click")
+            if(menu.classList.contains("open")){
+                menu.classList.remove("open")
+            }else{
+                menu.classList.add("open")
+            }
+        })
+    </script>
 </body>
 </html>

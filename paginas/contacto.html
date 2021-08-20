@@ -10,24 +10,24 @@
     <link rel="stylesheet" href="../css/estilosMobile.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Space+Grotesk:wght@300;400&family=Style+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="http://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
     <div class="contenedorRedes">
+        <div class="menuBurguer" id="buttonBurger"> <img src="../imagenes/menu.png"></div>
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand"></a>
             <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0 bordeBoton" type="submit">Search</button>
             </form>
         </nav>
     <div>
         <ul>
-            <li><a class="whatsapp" href="https://wa.me/+541125583632"><i class="fab fa-whatsapp"></i></a></li>
-            <li><a class="facebook" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a class="instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-            <li><a class="twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="whatsapp" href="https://wa.me/+541125583632"><img src="../imagenes/logoWp.png" width="20px" height="20px"></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/"><img src="../imagenes/logoFb.png" width="20px" height="20px"></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/"><img src="../imagenes/logoIg.png" width="20px" height="20px"></a></li>
+            <li><a class="twitter" href="https://www.twitter.com"><img src="../imagenes/logoTw.png" width="20px" height="20px"></a></li>
         </ul>
     </div>
     </div>
@@ -37,7 +37,7 @@
             <img src="../imagenes/logoBeauty.png">
             </a>
         </div>
-        <ul>
+        <ul id="hiddenMenu">
             <li class="botonMenu">
                 <a href="../index.html">Inicio</a>
             </li>
@@ -47,16 +47,16 @@
             <li class="botonMenu">
                 <a href="productos.html">Productos</a>
                     <ul>
-                        <li><a href="#maquillaje">Maquillaje</a></li>
-                        <li><a href="#skincare">SkinCare</a></li>
-                        <li><a href="#nails">Nails</a></li>
-                        <li><a href="#accesorios">Accesorios</a></li>
-                    </ul>
+                        <li><a href="productos.html#maquillaje">Maquillaje</a></li>
+                        <li><a href="productos.html#skincare">SkinCare</a></li>
+                        <li><a href="productos.html#nails">Nails</a></li>
+                        <li><a href="productos.html#accesorios">Accesorios</a></li>
+                    </ul> 
             </li>
             <li class="botonMenu">
                 <a href="contacto.html">Contacto</a>
             </li>
-            <li class="botonMenu">
+            <li class="botonMenu"> 
                 <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
             </li>
         </ul>
@@ -64,94 +64,82 @@
     <div class="contenedorWhatsapp">
         <p>Hola! Dejanos tu consulta ..</p>   
         <a href="https://wa.me/+541125583632" class="wathsapp">
-            <i class="fab fa-whatsapp"></i> 
+            <img src="../imagenes/whatsapp.png" width="20px" height="20px"> 
         </a>
     </div>
     <div class="contenedorContacto">
-        <h2>Contacto</h2>
-        <p>Tenés alguna duda? Podés encontrarnos en nuestras redes.</p>
-        <section class="contactoRedes">
-            <ul>
-                <li><a class="whatsapp" href="https://wa.me/+541125583632"><i class="fab fa-whatsapp"></i></a></li>
-                <li><a class="facebook" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a class="instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                <li><a class="twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </section>
-        <div class="registro">
-            <div class="col-sm-3">
-              <label class="visually-hidden" for="specificSizeInputName">Nombre</label>
-              <input type="text" class="form-control" id="specificSizeInputName" placeholder="Usuario">
-            </div>
-            <div class="col-sm-3">
-              <label class="visually-hidden" for="specificSizeInputGroupUsername">Email</label>
-              <div class="input-group">
-                <div class="input-group-text">@</div>
-                <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username">
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <label class="visually-hidden" for="specificSizeSelect">Preference</label>
-              <select class="form-select" id="specificSizeSelect">
-                <option selected>Genero</option>
-                <option value="1">Femenino</option>
-                <option value="2">Masculino</option>
-                <option value="3">Otro</option>
-              </select>
-            </div>
-            <div class="col-auto">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-                <label class="form-check-label" for="autoSizingCheck2">
-                  Recordarme
-                </label>
-              </div>
-            </div>
-            <div class="col-auto">
-              <button type="submit" class="btn btn-primary">Registrarme</button>
+        <div class="contenedorGeneral">
+            <div class="contedorContactoInner">
+                <h2>Contacto</h2>
+                <p>Tenés alguna duda? Podés encontrarnos en nuestras redes.</p>
+                <div class="contactoSectionLeft">
+                    <section class="contactoRedes">
+                        <ul>
+                            <li><a target="_blank" href="https://www.google.com.ar/maps/place/Abasto+Shopping/@-34.6031443,-58.4130297,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca8c854bd13f:0xfc0cf5c054da4aa1!8m2!3d-34.6031487!4d-58.410841" ><img src="../imagenes/ubicacion.png" width="20px" height="20px"></a><p>Av. Corrientes 3247, CABA</p></li>
+                            <li><a target="_blank" href="https://outlook.live.com/mail/"><img src="../imagenes/logoEmail.png" width="20px" height="20px"></a><p>info@beautyBarbie.com.ar</p></li>
+                            <li><a target="_blank" href="https://www.facebook.com/"><img src="../imagenes/logoFb.png" width="20px" height="20px"></a><p>Síguenos en Facebook</p></li>
+                            <li><a target="_blank" href="https://www.instagram.com/"><img src="../imagenes/logoIg.png" width="20px" height="20px"></a><p>Síguenos en Instagram</p></li>
+                            <li><a target="_blank" href="https://www.twitter.com"><img src="../imagenes/logoTw.png" width="20px" height="20px"></a><p>Síguenos en facebook</p></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="contactoSectionRight">
+                    <section class="formulario">
+                    <form>
+                        <article>
+                            <label for="nombre">Nombre</label>
+                            <input type="text"name="nombre"/>
+                        </article>
+                        <br>
+                        <article>
+                            <label for="email">Email</label>
+                            <input type="email" name="email"/>
+                        </article>
+                        <br>
+                        <article>
+                            <label for="telefono">Teléfono</label>
+                            <input type="telefono"name="telefono"/>
+                        </article>
+                        <br>
+                        <article>
+                            <label for="comentario">Dejanos tu mensaje (opcional)</label>
+                        <br>
+                            <textarea name="comentario"></textarea>
+                        </article>
+                        <br>
+                        <article>
+                            <input type="checkbox" name="promos" value="1"/>
+                            <label>Deseo recebir promos/ofertas vía email</label>
+                        </article>
+                        <article>
+                            <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+                            <button type="reset" class="btn btn-primary btn-sm">Borrar</button>
+                        </article>
+                    </form>
+                    </section>
+                </div>
             </div>
         </div>
-        <section class="formulario">
-        <form>
-            <article>
-                <label for="nombre">Nombre</label>
-                <input type="text"name="nombre"/>
-            </article>
-            <br>
-            <article>
-                <label for="email">Email</label>
-                <input type="email" name="email"/>
-            </article>
-            <br>
-            <article>
-                <label for="telefono">Teléfono</label>
-                <input type="telefono"name="telefono"/>
-            </article>
-            <br>
-            <article>
-                <label for="comentario">Dejanos tu mensaje (opcional)</label>
-            <br>
-                <textarea name="comentario"></textarea>
-            </article>
-            <br>
-            <article>
-                <input type="checkbox" name="promos" value="1"/>
-                <label>Deseo recebir promos/ofertas vía email</label>
-            </article>
-            <article>
-                <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
-                <button type="reset" class="btn btn-primary btn-sm">Borrar</button>
-            </article>
-        </form>
-        </section>
     </div>
-<hr>
-<div class="copy">
-<p> Copyright &copy; Beauty Barbie - 2021. Todos los derechos reservados.</p>   
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="./js/bootstrap.bundle.js"></script>
-<script src="./js/bootstrap.bundle.min.js"></script>  
-<script src="./js/bootstrap.js"></script>
+    <hr>
+    <div class="copy">
+    <p> Copyright &copy; Beauty Barbie - 2021. Todos los derechos reservados.</p>   
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>  
+    <script src="./js/bootstrap.js"></script>
+    <script>
+        let button = document.getElementById('buttonBurger');
+        let menu = document.getElementById('hiddenMenu');
+        button.addEventListener('click', function(){
+            console.log("hice click")
+            if(menu.classList.contains("open")){
+                menu.classList.remove("open")
+            }else{
+                menu.classList.add("open")
+            }
+        })
+    </script>
 </body>
 </html>

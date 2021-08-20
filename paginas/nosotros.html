@@ -10,26 +10,25 @@
     <link rel="stylesheet" href="../css/estilosMobile.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Space+Grotesk:wght@300;400&family=Style+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  href="http://use.fontawesome.com/releases/v5.8.1/css/all.css" 
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet"  href="http://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
     <div class="contenedorRedes">
+        <div class="menuBurguer" id="buttonBurger"> <img src="../imagenes/menu.png"></div>
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand"></a>
             <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0 bordeBoton" type="submit">Search</button>
             </form>
         </nav>
     <div>
         <ul>
-            <li><a class="whatsapp" href="https://wa.me/+541125583632"><i class="fab fa-whatsapp"></i></a></li>
-            <li><a class="facebook" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a class="instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-            <li><a class="twitter" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="whatsapp" href="https://wa.me/+541125583632"><img src="../imagenes/logoWp.png" width="20px" height="20px"></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/"><img src="../imagenes/logoFb.png" width="20px" height="20px"></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/"><img src="../imagenes/logoIg.png" width="20px" height="20px"></a></li>
+            <li><a class="twitter" href="https://www.twitter.com"><img src="../imagenes/logoTw.png" width="20px" height="20px"></a></li>
         </ul>
-    </div>
     </div>
     </div>
     <nav class="menu">
@@ -38,7 +37,7 @@
             <img src="../imagenes/logoBeauty.png">
             </a>
         </div>
-        <ul>
+        <ul id="hiddenMenu">
             <li class="botonMenu">
                 <a href="../index.html">Inicio</a>
             </li>
@@ -48,16 +47,16 @@
             <li class="botonMenu">
                 <a href="productos.html">Productos</a>
                     <ul>
-                    <li><a href="#maquillaje">Maquillaje</a></li>
-                    <li><a href="#skincare">SkinCare</a></li>
-                    <li><a href="#nails">Nails</a></li>
-                    <li><a href="#accesorios">Accesorios</a></li>
-                    </ul>
+                        <li><a href="productos.html#maquillaje">Maquillaje</a></li>
+                        <li><a href="productos.html#skincare">SkinCare</a></li>
+                        <li><a href="productos.html#nails">Nails</a></li>
+                        <li><a href="productos.html#accesorios">Accesorios</a></li>
+                    </ul> 
             </li>
             <li class="botonMenu">
                 <a href="contacto.html">Contacto</a>
             </li>
-            <li class="botonMenu">
+            <li class="botonMenu"> 
                 <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
             </li>
         </ul>
@@ -65,13 +64,15 @@
     <div class="contenedorWhatsapp">
         <p>Hola! Dejanos tu consulta ..</p>   
         <a href="https://wa.me/+541125583632" class="wathsapp">
-            <i class="fab fa-whatsapp"></i> 
+            <img src="../imagenes/whatsapp.png" width="20px" height="20px"> 
         </a>
     </div>
-<div class="nosotros">
-    <h2>Nosotros</h2>
-    <p>En Beauty Barbie nos dedicamos a la venta de cosméticos y productos de limpieza y cuidado facial de las mejores marcas disponibles en el mercado. Nuestros productos prometen ser de una exelente calidad, homologada por dermatólogos y cosmiatras garantizando notorios resultados y un cuidado adecuado para cada tipo de piel. El make up que manejamos, de igual manera homologado, otorga una increíble pigmentación como ningún otro, además contamos con una amplia variedad de productos para cubrir los gustos de cada persona. En nuestra web van a poder visualizar todo el stock disponible y recibir las mejores promos y ofertas.</p>
-</div>    
+    <div class="nosotros">
+        <div class="contenedorGeneral">
+            <h2>Nosotros</h2>
+            <p>En Beauty Barbie nos dedicamos a la venta de cosméticos y productos de limpieza y cuidado facial de las mejores marcas disponibles en el mercado. Nuestros productos prometen ser de una exelente calidad, homologada por dermatólogos y cosmiatras garantizando notorios resultados y un cuidado adecuado para cada tipo de piel. El make up que manejamos, de igual manera homologado, otorga una increíble pigmentación como ningún otro, además contamos con una amplia variedad de productos para cubrir los gustos de cada persona. En nuestra web van a poder visualizar todo el stock disponible y recibir las mejores promos y ofertas.</p>
+        </div>    
+    </div>
 <div class="copy">
     <p> Copyright &copy; Beauty Barbie - 2021. Todos los derechos reservados.</p>   
     </div>
@@ -79,5 +80,17 @@
 <script src="./js/bootstrap.bundle.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>  
 <script src="./js/bootstrap.js"></script>   
+<script>
+    let button = document.getElementById('buttonBurger');
+    let menu = document.getElementById('hiddenMenu');
+    button.addEventListener('click', function(){
+        console.log("hice click")
+        if(menu.classList.contains("open")){
+            menu.classList.remove("open")
+        }else{
+            menu.classList.add("open")
+        }
+    })
+</script>
 </body>
 </html>
