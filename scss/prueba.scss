@@ -63,8 +63,7 @@ $colorTexto:rgb(255, 255, 255);
         width: auto;
     }
     .bordeBoton{
-        padding-left: 5px;
-
+        padding-left: 10px;
     }
 }    
 
@@ -279,63 +278,6 @@ li.botonMenu ul {
     height: 600px;
 }
 
-
-/*---Productos Destacados---*/
-
-.productosDestacados {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-.productos h2{
-    font-family: $fuentePrincipal;
-    color: rgba(247, 89, 163, 0.877);
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    animation-duration: 5s;
-    animation-name: aparecer;
-}
-.productosDestacados .badge-secondary {
-    color: #fff;
-    background-color: rgb(255, 176, 229);
-    display: flex;
-    justify-content: center;
-}
-@keyframes aparecer {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-.productosDestacados article{
-    padding: 50px;
-    margin-left: 5px;
-    width: 100%;
-    justify-content:flex-start;
-    transition: 3s;
-    animation-duration: 5s;
-    animation-name: aparecer;
-}
-
-.productosDestacados img {
-    width: 100%;
-    height: 190px;
-    border: solid 5px rgb(255, 176, 229);
-}
-.productosDestacados article:hover{
-transform: scale(1.2);
-}
-.productosDestacados p{
-    font-family: $fuentePrincipal;
-    color: rgb(172, 113, 145);
-    margin-left: 15px;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
 /*---Nosotros---*/
 
 .nosotros{
@@ -380,9 +322,6 @@ section.listaProductos {
     width: 1080px;
     display: block;
     margin: 0 auto;
-}
-.listaProductos {
-    width: 100%;
     font-family: $fuentePrincipal;
     color: rgba(247, 89, 163, 0.877);
 
@@ -433,6 +372,7 @@ section.listaProductos {
         background-color: rgba(255, 192, 203, 0.87) !important; 
     }
 }
+
 .producto:hover {
     transform: scale(1.05);
     background-color: pink;
@@ -469,7 +409,7 @@ section.listaProductos {
         float: left;
         width: 50%;
     }
-    .contactoSectionRight article, .contactoSectionRight article label, .contactoSectionRight article input {
+    .contactoSectionRight article, .contactoSectionRight article label, .contactoSectionRight article input{
         float: left;
         width: 100%;
         text-align: left;
@@ -520,31 +460,22 @@ section.listaProductos {
 .contactoSectionLeft section.contactoRedes ul {
     display: flex;
     flex-direction: column;
-}
 
-.contactoSectionLeft section.contactoRedes ul li {
-    margin-left: 0px;
-    display: flex;
-    margin-top: 0px;
-    width: 100%;
-    align-items: center;
+    li {
+        margin-left: 0px;
+        display: flex;
+        margin-top: 0px;
+        width: 100%;
+        align-items: center;
+
+        p {
+        margin-top: 0;
+        margin-left: 10px;
+        margin-bottom: 0;
+        }
     }
-    
-.contactoSectionLeft section.contactoRedes ul li p {
-    margin-top: 0;
-    margin-left: 10px;
-    margin-bottom: 0;
 }
 
-.registro{
-    display: block;
-    align-items: center;
-    justify-content: space-between;
-    font-family: $fuentePrincipal;
-    color: rgba(247, 89, 163, 0.877);
-    animation-duration: 5s;
-    animation-name: aparecer;
-}
 
 .formulario{
  
@@ -570,6 +501,13 @@ section.listaProductos {
             background: #ef8bc4;
             border-color: #e8a7dd;
         }
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #ef8bc4 !important;
+            border-color: #ef8bc4 !important;
+        }
+        
+        
     }
 }    
 
@@ -649,13 +587,118 @@ section.listaProductos {
 
 /*---Tablet---*/
 
-@media(max-width: 768){
+@media(max-width: 768px){
+
+    /*--- Redes ---*/
+
+    .contenedorRedes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #cacaca;
     
+        nav {
+        /* width: 100%;*/
+        display: flex;
+        justify-content: flex-start;
+        }
+
+        form input {
+            width: 80%;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+
+            ul {
+            margin-bottom: 0px;
+            }
+        }
+    }
+
+    button.btn.btn-outline-success.my-2.my-sm-0.bordeBoton {
+        margin-left: 5px;
+        padding-left: 10px;
+    }
+
+        /*--- Menú---*/
+
+    .botonMenu a {
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .menu ul {
+        width: 100%;
+        box-sizing: border-box;
+    }    
+
+    /*---ContenedorGeneral---*/
+
+    .contenedorGeneral {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /*--- Productos ---*/
+    section.listaProductos {
+        width: 100%;
+    }
+    section.listaProductos .producto {
+        width: calc(50% - 20px);
+    }
+    
+/*---Nosotros---*/
+
+    .nosotros p{
+        font-family: "Roboto Condensed", sans-serif;
+        color: white;
+        font-weight: bold;
+        margin-top: 0px; 
+        margin-left: 0px; 
+        margin-right: 0px; 
+        animation-duration: 5s;
+        animation-name: aparecer;
+        padding: 25px;
+        text-align: center;
+        margin-bottom: 29px;
+    }
+
+/*---Contacto---*/  
+
+.contactoSectionLeft {
+    float: left;
+    width: 50%;
+}
+
+.contactoSectionRight {
+    float: left;
+    width: 50%;
+}
+
+.contactoSectionRight form {
+    width: 100%;
+}
+    
+    /*--- CopyRight---*/
+    .copy {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 /*---Smartphone---*/
 
 @media(max-width: 480px) {
+
+/*---MenuBurguer---*/
 
     ul#hiddenMenu.open {
         left: 0;
@@ -671,6 +714,7 @@ section.listaProductos {
         width: 50%;
         height: 100vh;
         box-shadow: 9px 23px 9px #0000000f;
+        
     }
 
     ul#hiddenMenu li {
@@ -765,16 +809,17 @@ section.listaProductos {
     /*--- Productos ---*/
     section.listaProductos {
         width: 100%;
-    }
-    section.listaProductos .producto {
+        
+        .producto {
         width: 100%;
         margin-left: 0px;
-    }
-    .listaProductos .contenedorProductos {
+        }
+        .contenedorProductos {
         display: block;
         padding: 5px 25px;
         margin-left: 0px; 
         width: 100%;
+        }
     }
 
     /*---Contacto---*/
@@ -784,8 +829,8 @@ section.listaProductos {
         width: 100%;
     }
     .contenedorContacto .contactoSectionRight {
-    float: left;
-    width: 100%;
+        float: left;
+        width: 100%;
     }
 
     /*--- CopyRight---*/
