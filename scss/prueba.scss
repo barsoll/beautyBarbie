@@ -522,6 +522,7 @@ section.listaProductos {
     float: left;
     width: 100%;
     padding: 20px;
+    margin-bottom: 50px;
 }
 .preguntasFrecuentes{
     display: flex;
@@ -536,7 +537,7 @@ section.listaProductos {
 
         h2{
             font-family: $fuentePrincipal;
-            color: rgb(172, 113, 145);
+            color: rgba(247, 89, 163, 0.877);
             font-style: bold;
             margin-bottom: 10px;
             font-size: 25px;
@@ -547,7 +548,7 @@ section.listaProductos {
             h3{
                 font-family: $fuentePrincipal;
                 font-style: bold;
-                color: rgba(194, 38, 124, 0.815);
+                color: rgba(247, 89, 163, 0.877);
                 display: flex;
                 font-size: 15px;
                 font-weight: bold;
